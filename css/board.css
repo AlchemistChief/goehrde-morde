@@ -1,12 +1,12 @@
 /* Corkboard Main Area */
-#corkboard {
+/*#corkboard {
     flex-grow: 1;
     position: relative;
     background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
-    background-color: #b08453; 
+    background-color: #b08453;
     box-shadow: inset 0 0 60px rgba(0,0,0,0.85);
     overflow: hidden;
-}
+}*/
 
 #string-canvas {
     position: absolute;

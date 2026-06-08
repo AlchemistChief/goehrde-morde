@@ -45,122 +45,133 @@
     </header>
 
     <!-- Main Investigative Board -->
-    <main id="corkboard">
-        <canvas id="string-canvas"></canvas>
+    <main id="corkboard-wrapper">
+        <main id="corkboard">
+            <canvas id="string-canvas"></canvas>
 
-        <!-- COLUMN 1: Case #1 & Forest (Left) -->
-        <div class="board-item note yellow" id="note-victims1" style="top: 5%; left: 3%; transform: rotate(-3deg);">
-            <div class="pin red-pin"></div>
-            <h3>Victims Case #1</h3>
-            <p><strong>Ursula & Peter Reinold</strong><br>Appeared to go on a hike. Last seen alive on July 12, 1989.
-                Their bodies were hidden deep within section 150 of the Göhrde state forest.</p>
-        </div>
+            <!-- COLUMN 1: Case #1 & Forest (Left) -->
+            <div class="board-item note yellow" id="note-victims1" style="top: 5%; left: 3%; transform: rotate(-3deg);">
+                <div class="pin red-pin"></div>
+                <h3>Victims Case #1</h3>
+                <p><strong>Ursula & Peter Reinold</strong><br>Appeared to go on a hike. Last seen alive on July 12,
+                    1989.
+                    Their bodies were hidden deep within section 150 of the Göhrde state forest.</p>
+            </div>
 
-        <div class="board-item photo" id="photo-dead1" style="top: 7%; left: 21%; transform: rotate(4deg);">
-            <div class="pin red-pin"></div>
-            <img src="assets/first.webp" alt="First Dead Pair" class="board-img">
-            <p class="caption">First Victim Pair Case file</p>
-        </div>
+            <div class="board-item photo" id="photo-dead1" style="top: 7%; left: 21%; transform: rotate(4deg);">
+                <div class="pin red-pin"></div>
+                <img src="assets/first.webp" alt="First Dead Pair" class="board-img">
+                <p class="caption">First Victim Pair Case file</p>
+            </div>
 
-        <div class="board-item note yellow" id="note-forest" style="top: 38%; left: 3%; transform: rotate(2deg);">
-            <div class="pin red-pin"></div>
-            <h3>The Göhrde Forest</h3>
-            <p>A massive, isolated state forest. High density of trees, remote hiking trails. Perfect hunting ground for
-                someone with profound geographical knowledge of the area.</p>
-        </div>
+            <div class="board-item note yellow" id="note-forest" style="top: 38%; left: 3%; transform: rotate(2deg);">
+                <div class="pin red-pin"></div>
+                <h3>The Göhrde Forest</h3>
+                <p>A massive, isolated state forest. High density of trees, remote hiking trails. Perfect hunting ground
+                    for
+                    someone with profound geographical knowledge of the area.</p>
+            </div>
 
-        <div class="board-item photo" id="photo-v1" style="top: 36%; left: 21%; transform: rotate(-4deg);">
-            <div class="pin red-pin"></div>
-            <img src="assets/forest_150.jpg" alt="Göhrde Forest Block" class="board-img">
-            <p class="caption">Forst-Section 150</p>
-        </div>
+            <div class="board-item photo" id="photo-v1" style="top: 36%; left: 21%; transform: rotate(-4deg);">
+                <div class="pin red-pin"></div>
+                <img src="assets/forest_150.jpg" alt="Göhrde Forest Block" class="board-img">
+                <p class="caption">Forst-Section 150</p>
+            </div>
 
-        <!-- COLUMN 2: Case #2 & Modus Operandi -->
-        <div class="board-item note white" id="note-victims2" style="top: 68%; left: 3%; transform: rotate(1deg);">
-            <div class="pin red-pin"></div>
-            <h3>Victims Case #2</h3>
-            <p><strong>Ingrid W. & Bernd-Michael K.</strong><br>Murdered on July 27, 1989. Strikingly, they were killed
-                on the exact day police discovered and recovered the first couple nearby.</p>
-        </div>
+            <!-- COLUMN 2: Case #2 & Modus Operandi -->
+            <div class="board-item note white" id="note-victims2" style="top: 68%; left: 3%; transform: rotate(1deg);">
+                <div class="pin red-pin"></div>
+                <h3>Victims Case #2</h3>
+                <p><strong>Ingrid W. & Bernd-Michael K.</strong><br>Murdered on July 27, 1989. Strikingly, they were
+                    killed
+                    on the exact day police discovered and recovered the first couple nearby.</p>
+            </div>
 
-        <div class="board-item photo" id="photo-dead2" style="top: 66%; left: 21%; transform: rotate(-3deg);">
-            <div class="pin red-pin"></div>
-            <img src="assets/second.webp" alt="Second Dead Pair" class="board-img">
-            <p class="caption">Second Victim Pair Case file</p>
-        </div>
+            <div class="board-item photo" id="photo-dead2" style="top: 66%; left: 21%; transform: rotate(-3deg);">
+                <div class="pin red-pin"></div>
+                <img src="assets/second.webp" alt="Second Dead Pair" class="board-img">
+                <p class="caption">Second Victim Pair Case file</p>
+            </div>
 
-        <div class="board-item note white" id="note-meters" style="top: 68%; left: 39%; transform: rotate(3deg);">
-            <div class="pin red-pin"></div>
-            <h3>Proximity: 800m Apart</h3>
-            <p>Geographical tracking maps prove the killer targeted the second couple less than a kilometer away from
-                the ongoing active recovery operation of the first victims.</p>
-        </div>
+            <div class="board-item note white" id="note-meters" style="top: 68%; left: 39%; transform: rotate(3deg);">
+                <div class="pin red-pin"></div>
+                <h3>Proximity: 800m Apart</h3>
+                <p>Geographical tracking maps prove the killer targeted the second couple less than a kilometer away
+                    from
+                    the ongoing active recovery operation of the first victims.</p>
+            </div>
 
-        <!-- COLUMN 3: Weaponry & Center Mystery -->
-        <div class="board-item note white" id="note-weapon" style="top: 38%; left: 39%; transform: rotate(-2deg);">
-            <div class="pin red-pin"></div>
-            <h3>The Modus Operandi</h3>
-            <p>A mix of blunt force trauma, strangulation, and gunshots. The killer used a small-caliber (.22) firearm.
-                Victims were bound using complex, secure knots.</p>
-        </div>
+            <!-- COLUMN 3: Weaponry & Center Mystery -->
+            <div class="board-item note white" id="note-weapon" style="top: 38%; left: 39%; transform: rotate(-2deg);">
+                <div class="pin red-pin"></div>
+                <h3>The Modus Operandi</h3>
+                <p>A mix of blunt force trauma, strangulation, and gunshots. The killer used a small-caliber (.22)
+                    firearm.
+                    Victims were bound using complex, secure knots.</p>
+            </div>
 
-        <div class="board-item note red-alert" id="note-mystery" style="top: 35%; left: 57%; transform: rotate(1deg);">
-            <div class="pin red-pin"></div>
-            <h2>THE COINCIDENCE?</h2>
-            <p>The killer returned to the forest to strike a second time while a massive police search operation was
-                actively deploying less than a kilometer away. Complete lack of fear.</p>
-        </div>
+            <div class="board-item note red-alert" id="note-mystery"
+                style="top: 35%; left: 57%; transform: rotate(1deg);">
+                <div class="pin red-pin"></div>
+                <h2>THE COINCIDENCE?</h2>
+                <p>The killer returned to the forest to strike a second time while a massive police search operation was
+                    actively deploying less than a kilometer away. Complete lack of fear.</p>
+            </div>
 
-        <!-- COLUMN 4: Vehicles & Restraints Info -->
-        <div class="board-item note white" id="note-car" style="top: 5%; left: 40%; transform: rotate(-3deg);">
-            <div class="pin red-pin"></div>
-            <h3>The Victims' Vehicle</h3>
-            <p>The killer stole the victims' cars to escape the forest, driving them to nearby towns. One car was later
-                found completely abandoned in a public parking lot.</p>
-        </div>
+            <!-- COLUMN 4: Vehicles & Restraints Info -->
+            <div class="board-item note white" id="note-car" style="top: 5%; left: 40%; transform: rotate(-3deg);">
+                <div class="pin red-pin"></div>
+                <h3>The Victims' Vehicle</h3>
+                <p>The killer stole the victims' cars to escape the forest, driving them to nearby towns. One car was
+                    later
+                    found completely abandoned in a public parking lot.</p>
+            </div>
 
-        <div class="board-item photo" id="photo-car-img" style="top: 6%; left: 59%; transform: rotate(3deg);">
-            <div class="pin red-pin"></div>
-            <img src="assets/car.jpg" alt="Stolen Car" class="board-img">
-            <p class="caption">Stolen Toyota Vehicle File</p>
-        </div>
+            <div class="board-item photo" id="photo-car-img" style="top: 6%; left: 59%; transform: rotate(3deg);">
+                <div class="pin red-pin"></div>
+                <img src="assets/car.jpg" alt="Stolen Car" class="board-img">
+                <p class="caption">Stolen Toyota Vehicle File</p>
+            </div>
 
-        <div class="board-item note white" id="note-restraints" style="top: 68%; left: 57%; transform: rotate(-2deg);">
-            <div class="pin red-pin"></div>
-            <h3>Evidence: Restraints</h3>
-            <p>Forensic examination confirmed mechanical handcuffs and complex rope binding sequences were actively
-                deployed on the victims prior to execution.</p>
-        </div>
+            <div class="board-item note white" id="note-restraints"
+                style="top: 68%; left: 57%; transform: rotate(-2deg);">
+                <div class="pin red-pin"></div>
+                <h3>Evidence: Restraints</h3>
+                <p>Forensic examination confirmed mechanical handcuffs and complex rope binding sequences were actively
+                    deployed on the victims prior to execution.</p>
+            </div>
 
-        <!-- COLUMN 5: Suspect, Accomplice & DNA (Far Right) -->
-        <div class="board-item note red-alert" id="note-accomplice"
-            style="top: 5%; left: 79%; transform: rotate(2deg);">
-            <div class="pin red-pin"></div>
-            <h3>Accomplice Theory?</h3>
-            <p>Investigators suspect a helper. How could one man manage to intercept, restrain, and kill two adult
-                couples completely undetected without assistance?</p>
-        </div>
+            <!-- COLUMN 5: Suspect, Accomplice & DNA (Far Right) -->
+            <div class="board-item note red-alert" id="note-accomplice"
+                style="top: 5%; left: 79%; transform: rotate(2deg);">
+                <div class="pin red-pin"></div>
+                <h3>Accomplice Theory?</h3>
+                <p>Investigators suspect a helper. How could one man manage to intercept, restrain, and kill two adult
+                    couples completely undetected without assistance?</p>
+            </div>
 
-        <div class="board-item note yellow" id="note-suspect" style="top: 36%; left: 79%; transform: rotate(4deg);">
-            <div class="pin red-pin"></div>
-            <h3>Prime Suspect</h3>
-            <p><strong>Kurt-Werner Wichmann</strong><br>A cemetery gardener from Lüneburg. Known violent history,
-                extreme psychological profile. He owned a secret, soundproof room.</p>
-        </div>
+            <div class="board-item note yellow" id="note-suspect" style="top: 36%; left: 79%; transform: rotate(4deg);">
+                <div class="pin red-pin"></div>
+                <h3>Prime Suspect</h3>
+                <p><strong>Kurt-Werner Wichmann</strong><br>A cemetery gardener from Lüneburg. Known violent history,
+                    extreme psychological profile. He owned a secret, soundproof room.</p>
+            </div>
 
-        <div class="board-item photo" id="photo-suspect" style="top: 64%; left: 74%; transform: rotate(-2deg);">
-            <div class="pin red-pin"></div>
-            <img src="assets/suspect.jpg" alt="Suspect Archive" class="board-img">
-            <p class="caption">Kurt-Werner Wichmann Archive</p>
-        </div>
+            <div class="board-item photo" id="photo-suspect" style="top: 64%; left: 74%; transform: rotate(-2deg);">
+                <div class="pin red-pin"></div>
+                <img src="assets/suspect.jpg" alt="Suspect Archive" class="board-img">
+                <p class="caption">Kurt-Werner Wichmann Archive</p>
+            </div>
 
-        <div class="board-item note yellow" id="note-dna" style="top: 66%; left: 88%; transform: rotate(-4deg);">
-            <div class="pin red-pin"></div>
-            <h3>The 2017 Breakthrough</h3>
-            <p>Advanced DNA testing on hair samples found in the victims' stolen car definitively matched Kurt-Werner
-                Wichmann, closing the case decades later.</p>
-        </div>
+            <div class="board-item note yellow" id="note-dna" style="top: 66%; left: 88%; transform: rotate(-4deg);">
+                <div class="pin red-pin"></div>
+                <h3>The 2017 Breakthrough</h3>
+                <p>Advanced DNA testing on hair samples found in the victims' stolen car definitively matched
+                    Kurt-Werner
+                    Wichmann, closing the case decades later.</p>
+            </div>
 
+        </main>
     </main>
 
     <!-- Modal for Previewing Board Items -->
