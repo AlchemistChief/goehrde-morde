@@ -43,8 +43,7 @@ body { font-family: 'Special Elite', cursive, monospace; background-color: #1a1a
 
 @media (min-width: 1025px) {
     #corkboard-wrapper {
-        overflow: hidden;
-        /* Verhindert Scrollbalken auf dem Desktop */
+        overflow: hidden; /* Verhindert Scrollbalken auf dem Desktop */
     }
 
     #corkboard {
