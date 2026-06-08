@@ -1,0 +1,193 @@
+/* Modals Layout Adjustments */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+    background: rgba(10, 10, 10, 0.88);
+    backdrop-filter: blur(12px);
+}
+
+.preview-container-wrapper {
+    position: relative;
+    display: inline-block;
+    max-width: 550px;
+    width: 90%;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .preview-container-wrapper {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    font-size: 3em;
+    color: #ff3333;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 8px rgba(0,0,0,0.8);
+    transition: transform 0.2s;
+    z-index: 120;
+}
+
+.timeline-modal-close, .theory-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2.5em;
+    color: #888;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    transition: color 0.2s;
+    z-index: 120;
+}
+
+.modal-close:hover, .timeline-modal-close:hover, .theory-modal-close:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+#preview-modal-body .board-item {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.9) !important;
+    cursor: default;
+}
+
+#preview-modal-body .note {
+    font-size: 1.2em !important;
+    padding: 30px !important;
+    min-height: 240px;
+}
+
+#preview-modal-body .photo {
+    padding: 20px 20px 45px 20px !important;
+}
+
+#preview-modal-body .board-img {
+    height: 320px !important;
+}
+
+#preview-modal-body .photo .caption {
+    font-size: 1.2em !important;
+    margin-top: 15px !important;
+}
+
+#preview-modal-body .pin { display: none; }
+
+/* Timeline Modal Layout */
+.timeline-modal-content {
+    background-color: #222;
+    color: #e0e0e0;
+    border: 3px solid #cc0000;
+    padding: 30px;
+    border-radius: 6px;
+    max-width: 550px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.9);
+    position: relative;
+}
+
+.timeline-modal-content h2 {
+    font-family: 'Permanent Marker', cursive;
+    color: #cc0000;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 8px;
+}
+
+.timeline-modal-content div {
+    font-size: 1.05em;
+    line-height: 1.6;
+}
+
+/* Theory Modal Content - Hidden Scrollbar */
+.theory-modal-content {
+    background-color: #120202;
+    background-image: radial-gradient(circle at center, #3a0505 0%, #120202 70%);
+    color: #f0e6e6;
+    border: 4px solid #8a0303;
+    box-shadow: 0 0 40px #ff0000, inset 0 0 20px rgba(0,0,0,1);
+    padding: 45px;
+    border-radius: 8px;
+    max-width: 750px;
+    width: 90%;
+    max-height: 85vh;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.theory-modal-content::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-overlay.active .theory-modal-content {
+    transform: scale(1);
+}
+
+.theory-modal-content h2 {
+    font-family: 'Permanent Marker', cursive;
+    color: #ff1a1a;
+    font-size: 2em;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 5px;
+}
+
+.theory-modal-content h3 {
+    font-family: 'Special Elite', monospace;
+    color: #b3a1a1;
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.theory-text-body {
+    font-size: 1.15em;
+    line-height: 1.7;
+    text-align: justify;
+    color: #e6dcdb;
+    border-top: 1px dashed #5e1616;
+    border-bottom: 1px dashed #5e1616;
+    padding: 20px 0;
+}
+
+.word-count-badge {
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #5e0404;
+    color: #ff9999;
+    padding: 4px 10px;
+    font-size: 0.85em;
+    font-weight: bold;
+    border-radius: 3px;
+    font-family: monospace;
+    border: 1px solid #9c1010;
+}

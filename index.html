@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Göhrde Murders - Case Board v7</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/modals.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header containing Interactive Timeline -->
+    <header class="timeline-header">
+        <div class="timeline">
+            <div class="timeline-event" data-timeline="may1989">
+                <span class="date">May 1989</span>
+                <span class="event">Strange Sightings</span>
+            </div>
+            <div class="timeline-event" data-timeline="july12">
+                <span class="date">July 12, 1989</span>
+                <span class="event">The First Disappearance</span>
+            </div>
+            <div class="timeline-event highlight" data-timeline="july27">
+                <span class="date">July 27, 1989</span>
+                <span class="event">Double Horror Discovery</span>
+            </div>
+            <div class="timeline-event" data-timeline="year1993">
+                <span class="date">1993</span>
+                <span class="event">Suspect Arrest & Suicide</span>
+            </div>
+            <div class="timeline-event" data-timeline="year2017">
+                <span class="date">2017+</span>
+                <span class="event">DNA & Forensics Breakthrough</span>
+            </div>
+
+            <button id="theory-summary-btn" class="bloody-button">
+                VIEW CLOSING STATEMENT & THEORY
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Investigative Board -->
+    <main id="corkboard">
+        <canvas id="string-canvas"></canvas>
+
+        <!-- COLUMN 1: Case #1 & Forest (Left) -->
+        <div class="board-item note yellow" id="note-victims1" style="top: 5%; left: 3%; transform: rotate(-3deg);">
+            <div class="pin red-pin"></div>
+            <h3>Victims Case #1</h3>
+            <p><strong>Ursula & Peter Reinold</strong><br>Appeared to go on a hike. Last seen alive on July 12, 1989.
+                Their bodies were hidden deep within section 150 of the Göhrde state forest.</p>
+        </div>
+
+        <div class="board-item photo" id="photo-dead1" style="top: 7%; left: 21%; transform: rotate(4deg);">
+            <div class="pin red-pin"></div>
+            <img src="assets/first.webp" alt="First Dead Pair" class="board-img">
+            <p class="caption">First Victim Pair Case file</p>
+        </div>
+
+        <div class="board-item note yellow" id="note-forest" style="top: 38%; left: 3%; transform: rotate(2deg);">
+            <div class="pin red-pin"></div>
+            <h3>The Göhrde Forest</h3>
+            <p>A massive, isolated state forest. High density of trees, remote hiking trails. Perfect hunting ground for
+                someone with profound geographical knowledge of the area.</p>
+        </div>
+
+        <div class="board-item photo" id="photo-v1" style="top: 36%; left: 21%; transform: rotate(-4deg);">
+            <div class="pin red-pin"></div>
+            <img src="assets/forest_150.jpg" alt="Göhrde Forest Block" class="board-img">
+            <p class="caption">Forst-Section 150</p>
+        </div>
+
+        <!-- COLUMN 2: Case #2 & Modus Operandi -->
+        <div class="board-item note white" id="note-victims2" style="top: 68%; left: 3%; transform: rotate(1deg);">
+            <div class="pin red-pin"></div>
+            <h3>Victims Case #2</h3>
+            <p><strong>Ingrid W. & Bernd-Michael K.</strong><br>Murdered on July 27, 1989. Strikingly, they were killed
+                on the exact day police discovered and recovered the first couple nearby.</p>
+        </div>
+
+        <div class="board-item photo" id="photo-dead2" style="top: 66%; left: 21%; transform: rotate(-3deg);">
+            <div class="pin red-pin"></div>
+            <img src="assets/second.webp" alt="Second Dead Pair" class="board-img">
+            <p class="caption">Second Victim Pair Case file</p>
+        </div>
+
+        <div class="board-item note white" id="note-meters" style="top: 68%; left: 39%; transform: rotate(3deg);">
+            <div class="pin red-pin"></div>
+            <h3>Proximity: 800m Apart</h3>
+            <p>Geographical tracking maps prove the killer targeted the second couple less than a kilometer away from
+                the ongoing active recovery operation of the first victims.</p>
+        </div>
+
+        <!-- COLUMN 3: Weaponry & Center Mystery -->
+        <div class="board-item note white" id="note-weapon" style="top: 38%; left: 39%; transform: rotate(-2deg);">
+            <div class="pin red-pin"></div>
+            <h3>The Modus Operandi</h3>
+            <p>A mix of blunt force trauma, strangulation, and gunshots. The killer used a small-caliber (.22) firearm.
+                Victims were bound using complex, secure knots.</p>
+        </div>
+
+        <div class="board-item note red-alert" id="note-mystery" style="top: 35%; left: 57%; transform: rotate(1deg);">
+            <div class="pin red-pin"></div>
+            <h2>THE COINCIDENCE?</h2>
+            <p>The killer returned to the forest to strike a second time while a massive police search operation was
+                actively deploying less than a kilometer away. Complete lack of fear.</p>
+        </div>
+
+        <!-- COLUMN 4: Vehicles & Restraints Info -->
+        <div class="board-item note white" id="note-car" style="top: 5%; left: 40%; transform: rotate(-3deg);">
+            <div class="pin red-pin"></div>
+            <h3>The Victims' Vehicle</h3>
+            <p>The killer stole the victims' cars to escape the forest, driving them to nearby towns. One car was later
+                found completely abandoned in a public parking lot.</p>
+        </div>
+
+        <div class="board-item photo" id="photo-car-img" style="top: 6%; left: 59%; transform: rotate(3deg);">
+            <div class="pin red-pin"></div>
+            <img src="assets/car.jpg" alt="Stolen Car" class="board-img">
+            <p class="caption">Stolen Toyota Vehicle File</p>
+        </div>
+
+        <div class="board-item note white" id="note-restraints" style="top: 68%; left: 57%; transform: rotate(-2deg);">
+            <div class="pin red-pin"></div>
+            <h3>Evidence: Restraints</h3>
+            <p>Forensic examination confirmed mechanical handcuffs and complex rope binding sequences were actively
+                deployed on the victims prior to execution.</p>
+        </div>
+
+        <!-- COLUMN 5: Suspect, Accomplice & DNA (Far Right) -->
+        <div class="board-item note red-alert" id="note-accomplice"
+            style="top: 5%; left: 79%; transform: rotate(2deg);">
+            <div class="pin red-pin"></div>
+            <h3>Accomplice Theory?</h3>
+            <p>Investigators suspect a helper. How could one man manage to intercept, restrain, and kill two adult
+                couples completely undetected without assistance?</p>
+        </div>
+
+        <div class="board-item note yellow" id="note-suspect" style="top: 36%; left: 79%; transform: rotate(4deg);">
+            <div class="pin red-pin"></div>
+            <h3>Prime Suspect</h3>
+            <p><strong>Kurt-Werner Wichmann</strong><br>A cemetery gardener from Lüneburg. Known violent history,
+                extreme psychological profile. He owned a secret, soundproof room.</p>
+        </div>
+
+        <div class="board-item photo" id="photo-suspect" style="top: 64%; left: 74%; transform: rotate(-2deg);">
+            <div class="pin red-pin"></div>
+            <img src="assets/suspect.jpg" alt="Suspect Archive" class="board-img">
+            <p class="caption">Kurt-Werner Wichmann Archive</p>
+        </div>
+
+        <div class="board-item note yellow" id="note-dna" style="top: 66%; left: 88%; transform: rotate(-4deg);">
+            <div class="pin red-pin"></div>
+            <h3>The 2017 Breakthrough</h3>
+            <p>Advanced DNA testing on hair samples found in the victims' stolen car definitively matched Kurt-Werner
+                Wichmann, closing the case decades later.</p>
+        </div>
+
+    </main>
+
+    <!-- Modal for Previewing Board Items -->
+    <div id="preview-modal" class="modal-overlay">
+        <div class="preview-container-wrapper">
+            <span class="modal-close">&times;</span>
+            <div id="preview-modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Modal for Interactive Timeline Summaries -->
+    <div id="timeline-modal" class="modal-overlay">
+        <div class="timeline-modal-content">
+            <span class="timeline-modal-close">&times;</span>
+            <h2 id="timeline-title">Timeline Update</h2>
+            <div id="timeline-body">Detailed summary goes here.</div>
+        </div>
+    </div>
+
+    <!-- Unique, Bloody Design Modal for Closing Statement -->
+    <div id="theory-modal" class="modal-overlay">
+        <div class="theory-modal-content">
+            <span class="theory-modal-close">&times;</span>
+            <h2>INVESTIGATIVE CLOSING STATEMENT</h2>
+            <h3>The Definitive Theory on the Göhrde Murders</h3>
+
+            <div class="theory-text-body">
+                The evaluation of forensic findings and crime scene mapping confirms that Kurt Werner Wichmann acted
+                with cold precision. He chose the dense Göhrde state forest because his background as a local cemetery
+                gardener provided him with impeccable geographical knowledge. This familiarity enabled him to navigate
+                hidden paths and move completely undetected.
+                <br><br>
+                The chronological overlap on July 27 is the most critical element of the case. While police
+                investigators actively secured the location of the first victims, Wichmann was already hunting his next
+                targets just eight hundred meters away. This proximity establishes an extreme level of psychopathy and
+                criminal confidence. He utilized a small caliber firearm and specialized knots to bind his victims
+                quickly. This meticulous sequence reveals an experienced perpetrator who maintained total situational
+                control despite the immediate presence of law enforcement officers.
+                <br><br>
+                The execution of these simultaneous tasks suggests that a secondary helper was likely involved. Managing
+                the structural logistics of tracking, capturing, and neutralizing two adults at the same time without
+                triggering immediate panic is highly complex. An accomplice could have monitored police movements or
+                helped transport the stolen vehicles away from the forest perimeter.
+                <br><br>
+                The current consensus confirms that Wichmann was the primary executioner. The 2017 modern DNA extraction
+                from the hijacked vehicle provides undeniable biological proof. He successfully eluded justice by
+                committing suicide in 1993, but the technological progression of forensic science eventually exposed his
+                ultimate guilt.
+            </div>
+
+            <div class="word-count-badge">Word Count: 251 words</div>
+        </div>
+    </div>
+
+    <script src="js/connections.js"></script>
+    <script src="js/interactivity.js"></script>
+</body>
+
+</html>
