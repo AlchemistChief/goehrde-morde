@@ -178,16 +178,3 @@
     border-bottom: 1px dashed #5e1616;
     padding: 20px 0;
 }
-
-.word-count-badge {
-    margin-top: 20px;
-    display: inline-block;
-    background-color: #5e0404;
-    color: #ff9999;
-    padding: 4px 10px;
-    font-size: 0.85em;
-    font-weight: bold;
-    border-radius: 3px;
-    font-family: monospace;
-    border: 1px solid #9c1010;
-}
